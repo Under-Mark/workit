@@ -1,4 +1,13 @@
 @import "tailwindcss";
 :root {
   font-size: 16px;
+ 
 }
+body{
+  background-color: #1F242A;
+}
+
+/* darkorange : #B44A1A
+Dark Background : #1F242A
+primary text : #F2F2F2
+secondary text : #B7B7B7 */
