@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { getWorkoutPlan } from "../ai"
 export default function Form() {
 
     const [workoutSplit, setWorkoutSplit] = useState([])
@@ -39,6 +39,7 @@ export default function Form() {
         const duration = formData.get("duration")
         const splits = formData.getAll("workoutSplit")
         console.log({ fitnessLevel, equipAccess, duration, splits })
+        getWorkoutPlan({ fitnessLevel, equipAccess, duration, splits })
     }
 
     return (
