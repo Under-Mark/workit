@@ -1,4 +1,11 @@
 export default function Hero() {
+  const scrollToForm = () => {
+    const formElement = document.getElementById('workout-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <main className="min-h-screen flex flex-col justify-center items-center px-4 relative sm:mt-24">
       <h1 className="text-4xl md:text-5xl font-extrabold text-orange-500 text-center drop-shadow-md">
@@ -17,7 +24,8 @@ export default function Hero() {
       
         <div className="absolute inset-0 flex items-center justify-center">
         <div className="group">
-  <button className="min-w-60 min-h-18 bg-gray-900 hover:bg-gray-800 transition-all text-gray-50 text-4xl font-bold px-10 py-4 rounded-full shadow-[0_0_25px_rgba(180,74,26,0.6)] border border-orange-400 relative overflow-hidden cursor-pointer">
+  <button className="min-w-60 min-h-18 bg-gray-900 hover:bg-gray-800 transition-all text-gray-50 text-4xl font-bold px-10 py-4 rounded-full shadow-[0_0_25px_rgba(180,74,26,0.6)] border border-orange-400 relative overflow-hidden cursor-pointer" 
+  onClick={scrollToForm}>
     <span className="absolute inset-0 flex items-center justify-center transition-opacity duration-200 group-hover:opacity-0">
       Get Started
     </span>
